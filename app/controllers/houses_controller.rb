@@ -33,11 +33,13 @@ class HousesController < ApplicationController
     redirect_to conference_house_path(@house)
   end
 
-  def destroy
-    # @house = House.find(params[:id])
-    # @conference = Conference.find(params[:conference_id])
-    # @house.destroy
-  end
+  # def destroy
+  #   @house = House.find(params[:id])
+  #   @house.destroy
+  #   @conference = Conference.find(params[:conference_id])
+
+  #   redirect_to conference_path(@conference)
+  # end
 
   private
   def house_params

@@ -7,3 +7,4 @@
     <h3 class="position">Position: <%= @character.position%></h3>
 </div>
 
+<h3><%= link_to 'Delete Player', conference_house_character_path(@conference, @house, @character), :method => :delete %></h3>

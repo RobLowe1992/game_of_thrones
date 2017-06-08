@@ -39,10 +39,14 @@ class CharactersController < ApplicationController
     redirect_to conference_house_character_path(@conference, @house, @character)
   end
 
-  # def destroy
-  #   @character = Character.find(params[:id])
-  #   @character.destroy
-  # end
+  def destroy
+    @character = Character.find(params[:id])
+    @character.destroy
+    @conference = House.find(params[:conference_id])
+    @house = House.find(params[:house_id])
+
+    redirect_to conference_house_path(@conference, @house)
+  end
 
   private
   def character_params
