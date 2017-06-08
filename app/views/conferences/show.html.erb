@@ -1,0 +1,11 @@
+<h1>Houses</h1>
+
+<h3><%= link_to 'Add House', new_conference_house_path(@conference) %></h3>
+
+<div class="container">
+    <% @houses.each do | house | %>
+        <a class="width-50" href="<%= conference_house_path(house.conference,house) %>">
+            <div><%= image_tag(house.img_url, width: '300') %></div>
+        </a>
+    <% end %>
+</div>

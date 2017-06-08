@@ -1,0 +1,29 @@
+// Place all the styles related to the Conferences controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: inline-flex;
+
+
+    .width-50 {
+        max-width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .screen-queries {
+        width: 200px;
+    }
+}

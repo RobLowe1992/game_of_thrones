@@ -1,0 +1,17 @@
+<h3>Edit Character</h3>
+
+<%= form_for [@conference, @house, @character] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%=  f.label :position %>
+    <%=  f.text_field  :position %>
+
+    <%= f.label :pic_url %>
+    <%= f.text_field :pic_url %>
+
+    <%= f.label :house_id %>
+    <%= f.text_field :house_id %>
+
+    <%= f.submit 'Save Changes'%>
+<% end %>

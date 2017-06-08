@@ -1,0 +1,9 @@
+<h1>Conferences</h1>
+
+<div class="container">
+    <% @conferences.each do | conference | %>
+        <a class="width-50" href="<%= conference_path(conference) %>">
+            <div><%= image_tag(conference.img_url, width: '500') %></div>
+        </a>
+    <% end %>
+</div>

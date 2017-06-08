@@ -1,0 +1,13 @@
+<h1>Characters</h1>
+
+<div class="container">
+    <% @characters.each do | character | %>
+    <div class="width-50">
+        <h2><%= character.name %></h2>
+        <a href="<%= conference_house_character_path(character.house.conference, character.house, character) %>">
+            <%= image_tag(character.pic_url, width: '400', height: '400') %>
+        </a>
+        <h3 class="position">Position: <%= character.position%></h3>
+    </div>
+    <% end %>
+</div>

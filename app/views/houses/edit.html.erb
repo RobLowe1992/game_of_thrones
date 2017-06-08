@@ -1,0 +1,14 @@
+<h3>Edit House</h3>
+
+<%= form_for [@house.conference, @house] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+
+    <%= f.label :id %>
+    <%= f.text_field :id %>
+
+    <%= f.submit 'Save Changes'%>
+<% end %>

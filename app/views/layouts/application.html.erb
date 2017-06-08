@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameOfThrones</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  </head>
+
+  <body>
+    <header><div></div></header>
+    <h2 class="nav"><%= link_to "View Conferences", conferences_path %> | <%=link_to "View Houses", houses_path %> | <%= link_to "View Characters", characters_path %></h2>
+    <%= yield %>
+  </body>
+</html>

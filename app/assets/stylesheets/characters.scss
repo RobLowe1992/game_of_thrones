@@ -1,0 +1,28 @@
+// Place all the styles related to the Characters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container {
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+    margin: 0 auto;
+
+    div.width-50 {
+        margin-bottom: 50px;
+    }
+
+    .width-50 img {
+        margin-bottom: 0;
+        border-radius: 25px;
+    }
+
+    .position {
+        margin-top: 5px;
+    }
+}
+
+.container img {
+    border-radius: 25px;
+}
