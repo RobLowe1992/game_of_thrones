@@ -14,17 +14,6 @@
  *= require_self
  */
 
-@font-face {
-  font-family: "thrones";
-  src: url('game_of_thrones.ttf') format("truetype");
-}
-
-/* assets/fonts */
-@font-face {
-  font-family: "thrones";
-  src: font-url('game_of_thrones.ttf') format("truetype");
-}
-
 h1, h2, h3 {
     font-family: 'Cinzel Decorative', cursive;
 }
