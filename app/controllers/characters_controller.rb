@@ -4,6 +4,11 @@ class CharactersController < ApplicationController
   end
 
   def create
+    @character = Character.create(character_params)
+    @conference = Conference.find(params[:conference_id])
+    @house = House.find(params[:house_id])
+
+    redirect_to conference_house_character_path(@conference, @house, @character)
   end
 
   def new
@@ -34,11 +39,13 @@ class CharactersController < ApplicationController
     redirect_to conference_house_character_path(@conference, @house, @character)
   end
 
-  def destroy
-  end
+  # def destroy
+  #   @character = Character.find(params[:id])
+  #   @character.destroy
+  # end
 
   private
   def character_params
-    params.require(:character).permit(:name, :position, :pic_url, :house)
+    params.require(:character).permit(:name, :position, :pic_url, :house_id)
   end
 end

@@ -5,13 +5,15 @@ class HousesController < ApplicationController
 
   def create
     @house = House.create(house_params)
+    @conference = Conference.find(params[:conference_id])
 
-    redirect_to conference_house_path(@house.conference, @house)
+    redirect_to conference_house_path(@conference, @house)
   end
 
   def new
     @house = House.new
     @house.conference_id = params[:conference_id]
+    @conference = Conference.find(params[:conference_id])
   end
 
   def edit
@@ -32,10 +34,13 @@ class HousesController < ApplicationController
   end
 
   def destroy
+    # @house = House.find(params[:id])
+    # @conference = Conference.find(params[:conference_id])
+    # @house.destroy
   end
 
   private
   def house_params
-    params.require(:house).permit(:name, :img_url, :conference)
+    params.require(:house).permit(:name, :img_url, :conference_id)
   end
 end

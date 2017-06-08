@@ -1,6 +1,6 @@
 <h3>Add House</h3>
 
-<%= form_for @house do |f| %>
+<%= form_for [@conference, @house] do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
 
